@@ -19,12 +19,14 @@ namespace Sortation_Algoritms
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            
+            Rdb_Assending.Select();
+            Cmb_Algorithm.Text = "Bubble Sort";
+
         }
 
         private void Btn_Sort_Click(object sender, EventArgs e)
         {
-
+            
         }
     }
 }
