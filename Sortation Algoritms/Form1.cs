@@ -26,6 +26,17 @@ namespace Sortation_Algoritms
 
         private void Btn_Sort_Click(object sender, EventArgs e)
         {
+            Spliter split= new Spliter();
+            int num = split.Counter("13,6,25");
+
+            int[] arr = new int[num];
+            arr = split.Splitor("13,6,25");
+            
+            for (int i = 0; i < num; i++)
+            {
+                Tbx_Output.Text = Tbx_Output.Text + Convert.ToString(arr[i]);
+            }
+            
             
         }
     }
