@@ -10,11 +10,11 @@ namespace Sortation_Algoritms
     {
         
 
-        public int[] Splitor(string inputArray)
+        public int[] Splitor(string inputArray, int counter)
         {
             string tempNum = "";
             int count = 0; 
-            int[] array = new int[Counter(inputArray)];
+            int[] array = new int[counter];
 
             for (int i = 0; i < inputArray.Length; i++)
             { 
@@ -33,6 +33,18 @@ namespace Sortation_Algoritms
             array[count] = int.Parse(tempNum);
 
             return array;
+        }
+
+        public string Concat(int[] array)
+        {
+            string final = "";
+
+            for (int i= 0; i < array.Length; i++)
+            {
+                final = final + array[i] + ",";
+            }
+
+            return final;
         }
 
         public int Counter(string inputArray)

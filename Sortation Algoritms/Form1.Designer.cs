@@ -35,9 +35,9 @@
             this.label3 = new System.Windows.Forms.Label();
             this.Btn_Sort = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.Rdb_Assending = new System.Windows.Forms.RadioButton();
+            this.Rdb_Ascending = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.Rdb_Dessending = new System.Windows.Forms.RadioButton();
+            this.Rdb_Descending = new System.Windows.Forms.RadioButton();
             this.Tbx_Output = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.Lbl_SortTime = new System.Windows.Forms.Label();
@@ -114,37 +114,37 @@
             this.label4.TabIndex = 6;
             this.label4.Text = "Sort by : ";
             // 
-            // Rdb_Assending
+            // Rdb_Ascending
             // 
-            this.Rdb_Assending.AutoSize = true;
-            this.Rdb_Assending.Location = new System.Drawing.Point(6, 18);
-            this.Rdb_Assending.Name = "Rdb_Assending";
-            this.Rdb_Assending.Size = new System.Drawing.Size(74, 17);
-            this.Rdb_Assending.TabIndex = 7;
-            this.Rdb_Assending.TabStop = true;
-            this.Rdb_Assending.Text = "Assending";
-            this.Rdb_Assending.UseVisualStyleBackColor = true;
+            this.Rdb_Ascending.AutoSize = true;
+            this.Rdb_Ascending.Location = new System.Drawing.Point(6, 18);
+            this.Rdb_Ascending.Name = "Rdb_Ascending";
+            this.Rdb_Ascending.Size = new System.Drawing.Size(75, 17);
+            this.Rdb_Ascending.TabIndex = 7;
+            this.Rdb_Ascending.TabStop = true;
+            this.Rdb_Ascending.Text = "Ascending";
+            this.Rdb_Ascending.UseVisualStyleBackColor = true;
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.Rdb_Dessending);
-            this.groupBox1.Controls.Add(this.Rdb_Assending);
+            this.groupBox1.Controls.Add(this.Rdb_Descending);
+            this.groupBox1.Controls.Add(this.Rdb_Ascending);
             this.groupBox1.Location = new System.Drawing.Point(85, 291);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(200, 53);
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
             // 
-            // Rdb_Dessending
+            // Rdb_Descending
             // 
-            this.Rdb_Dessending.AutoSize = true;
-            this.Rdb_Dessending.Location = new System.Drawing.Point(97, 18);
-            this.Rdb_Dessending.Name = "Rdb_Dessending";
-            this.Rdb_Dessending.Size = new System.Drawing.Size(81, 17);
-            this.Rdb_Dessending.TabIndex = 8;
-            this.Rdb_Dessending.TabStop = true;
-            this.Rdb_Dessending.Text = "Dessending";
-            this.Rdb_Dessending.UseVisualStyleBackColor = true;
+            this.Rdb_Descending.AutoSize = true;
+            this.Rdb_Descending.Location = new System.Drawing.Point(97, 18);
+            this.Rdb_Descending.Name = "Rdb_Descending";
+            this.Rdb_Descending.Size = new System.Drawing.Size(82, 17);
+            this.Rdb_Descending.TabIndex = 8;
+            this.Rdb_Descending.TabStop = true;
+            this.Rdb_Descending.Text = "Descending";
+            this.Rdb_Descending.UseVisualStyleBackColor = true;
             // 
             // Tbx_Output
             // 
@@ -209,9 +209,9 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button Btn_Sort;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.RadioButton Rdb_Assending;
+        private System.Windows.Forms.RadioButton Rdb_Ascending;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.RadioButton Rdb_Dessending;
+        private System.Windows.Forms.RadioButton Rdb_Descending;
         private System.Windows.Forms.TextBox Tbx_Output;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label Lbl_SortTime;

@@ -12,7 +12,7 @@ namespace Sortation_Algoritms
         private long timer;
         
 
-        public int[] BubbleSortDec(int[] array)
+        public int[] BubbleSortDes(int[] array)
         {
             Stopwatch myWatch = new Stopwatch();
             myWatch.Start();
