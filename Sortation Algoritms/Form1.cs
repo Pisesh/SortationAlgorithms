@@ -19,7 +19,12 @@ namespace Sortation_Algoritms
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            
+        }
 
+        private void Btn_Sort_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(Cmb_Algorithm.Text);
         }
     }
 }

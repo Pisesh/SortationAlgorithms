@@ -101,6 +101,7 @@
             this.Btn_Sort.TabIndex = 5;
             this.Btn_Sort.Text = "Sort";
             this.Btn_Sort.UseVisualStyleBackColor = true;
+            this.Btn_Sort.Click += new System.EventHandler(this.Btn_Sort_Click);
             // 
             // label4
             // 
