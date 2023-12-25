@@ -28,29 +28,29 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.Tbx_Input = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.Cmb_Algorithm = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.Btn_Sort = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.Rdb_Assending = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.Rdb_Dessending = new System.Windows.Forms.RadioButton();
+            this.Tbx_Output = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.Lbl_SortTime = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // textBox1
+            // Tbx_Input
             // 
-            this.textBox1.Location = new System.Drawing.Point(52, 118);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(461, 103);
-            this.textBox1.TabIndex = 0;
+            this.Tbx_Input.Location = new System.Drawing.Point(52, 118);
+            this.Tbx_Input.Multiline = true;
+            this.Tbx_Input.Name = "Tbx_Input";
+            this.Tbx_Input.Size = new System.Drawing.Size(461, 103);
+            this.Tbx_Input.TabIndex = 0;
             // 
             // label1
             // 
@@ -58,9 +58,9 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(141, 18);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(241, 25);
+            this.label1.Size = new System.Drawing.Size(253, 25);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Sortation Algoritms Test";
+            this.label1.Text = "Sortation Algorithms Test";
             // 
             // label2
             // 
@@ -72,16 +72,16 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Enter your array (splite numbers with \",\"): ";
             // 
-            // comboBox1
+            // Cmb_Algorithm
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.Cmb_Algorithm.FormattingEnabled = true;
+            this.Cmb_Algorithm.Items.AddRange(new object[] {
             "Buble Sort",
             "Insertation Sort"});
-            this.comboBox1.Location = new System.Drawing.Point(164, 264);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 3;
+            this.Cmb_Algorithm.Location = new System.Drawing.Point(164, 264);
+            this.Cmb_Algorithm.Name = "Cmb_Algorithm";
+            this.Cmb_Algorithm.Size = new System.Drawing.Size(121, 21);
+            this.Cmb_Algorithm.TabIndex = 3;
             // 
             // label3
             // 
@@ -93,14 +93,14 @@
             this.label3.TabIndex = 4;
             this.label3.Text = "Sortation Algorithm : ";
             // 
-            // button1
+            // Btn_Sort
             // 
-            this.button1.Location = new System.Drawing.Point(245, 364);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Sort";
-            this.button1.UseVisualStyleBackColor = true;
+            this.Btn_Sort.Location = new System.Drawing.Point(245, 364);
+            this.Btn_Sort.Name = "Btn_Sort";
+            this.Btn_Sort.Size = new System.Drawing.Size(75, 23);
+            this.Btn_Sort.TabIndex = 5;
+            this.Btn_Sort.Text = "Sort";
+            this.Btn_Sort.UseVisualStyleBackColor = true;
             // 
             // label4
             // 
@@ -112,83 +112,85 @@
             this.label4.TabIndex = 6;
             this.label4.Text = "Sort by : ";
             // 
-            // radioButton1
+            // Rdb_Assending
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(6, 18);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(74, 17);
-            this.radioButton1.TabIndex = 7;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Assending";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.Rdb_Assending.AutoSize = true;
+            this.Rdb_Assending.Location = new System.Drawing.Point(6, 18);
+            this.Rdb_Assending.Name = "Rdb_Assending";
+            this.Rdb_Assending.Size = new System.Drawing.Size(74, 17);
+            this.Rdb_Assending.TabIndex = 7;
+            this.Rdb_Assending.TabStop = true;
+            this.Rdb_Assending.Text = "Assending";
+            this.Rdb_Assending.UseVisualStyleBackColor = true;
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.radioButton2);
-            this.groupBox1.Controls.Add(this.radioButton1);
+            this.groupBox1.Controls.Add(this.Rdb_Dessending);
+            this.groupBox1.Controls.Add(this.Rdb_Assending);
             this.groupBox1.Location = new System.Drawing.Point(85, 291);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(200, 53);
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
             // 
-            // radioButton2
+            // Rdb_Dessending
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(97, 18);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(81, 17);
-            this.radioButton2.TabIndex = 8;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Dessending";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.Rdb_Dessending.AutoSize = true;
+            this.Rdb_Dessending.Location = new System.Drawing.Point(97, 18);
+            this.Rdb_Dessending.Name = "Rdb_Dessending";
+            this.Rdb_Dessending.Size = new System.Drawing.Size(81, 17);
+            this.Rdb_Dessending.TabIndex = 8;
+            this.Rdb_Dessending.TabStop = true;
+            this.Rdb_Dessending.Text = "Dessending";
+            this.Rdb_Dessending.UseVisualStyleBackColor = true;
             // 
-            // textBox2
+            // Tbx_Output
             // 
-            this.textBox2.Location = new System.Drawing.Point(52, 405);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(461, 103);
-            this.textBox2.TabIndex = 9;
+            this.Tbx_Output.Location = new System.Drawing.Point(52, 405);
+            this.Tbx_Output.Multiline = true;
+            this.Tbx_Output.Name = "Tbx_Output";
+            this.Tbx_Output.Size = new System.Drawing.Size(461, 103);
+            this.Tbx_Output.TabIndex = 9;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(19, 554);
+            this.label5.Location = new System.Drawing.Point(12, 553);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(145, 18);
             this.label5.TabIndex = 10;
             this.label5.Text = "Sort algorithm  time: ";
             // 
-            // label6
+            // Lbl_SortTime
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(161, 554);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(0, 18);
-            this.label6.TabIndex = 11;
+            this.Lbl_SortTime.AutoSize = true;
+            this.Lbl_SortTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_SortTime.Location = new System.Drawing.Point(179, 553);
+            this.Lbl_SortTime.Name = "Lbl_SortTime";
+            this.Lbl_SortTime.Size = new System.Drawing.Size(12, 18);
+            this.Lbl_SortTime.TabIndex = 11;
+            this.Lbl_SortTime.Text = " ";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(584, 628);
-            this.Controls.Add(this.label6);
+            this.Controls.Add(this.Lbl_SortTime);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.Tbx_Output);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.Btn_Sort);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.Cmb_Algorithm);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.Tbx_Input);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Sortation Algorithms Test";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -198,19 +200,19 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox Tbx_Input;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox Cmb_Algorithm;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button Btn_Sort;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton Rdb_Assending;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.RadioButton Rdb_Dessending;
+        private System.Windows.Forms.TextBox Tbx_Output;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label Lbl_SortTime;
     }
 }
 
