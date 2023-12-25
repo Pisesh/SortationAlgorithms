@@ -24,7 +24,7 @@ namespace Sortation_Algoritms
 
         private void Btn_Sort_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(Cmb_Algorithm.Text);
+
         }
     }
 }
