@@ -43,5 +43,10 @@ namespace Sortation_Algoritms
             Lbl_SortTime.Text = Lbl_SortTime.Text + " MS";
             
         }
+
+        private void Btn_Genrate_Click(object sender, EventArgs e)
+        {
+            Tbx_Input.Text = main.RandomNumber(int.Parse(Tbx_Count.Text), int.Parse(Tbx_Distance_First.Text), int.Parse(Tbx_Distance_End.Text));
+        }
     }
 }

@@ -12,6 +12,7 @@ namespace Sortation_Algoritms
         private long algorithmTime;
         private string algorithmType;
 
+        RandomGenrator Mrg = new RandomGenrator();
         Spliter Msp = new Spliter();
         Sort Mso = new Sort();
 
@@ -103,6 +104,17 @@ namespace Sortation_Algoritms
 
             return final;
 
+        }
+
+        public string RandomNumber(int count, int first, int end)
+        {
+            string final = "";
+            int[] array = new int[count];
+
+            array = Mrg.RandomNumber(count, first, end);
+            final = Msp.Concat(array);
+
+            return final;
         }
 
     }

@@ -43,6 +43,7 @@ namespace Sortation_Algoritms
             {
                 final = final + array[i] + ",";
             }
+            final = final.Substring(0, final.Length - 1);
 
             return final;
         }

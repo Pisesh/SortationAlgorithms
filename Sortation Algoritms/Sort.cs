@@ -87,6 +87,9 @@ namespace Sortation_Algoritms
 
         public int[] InsertionSortAsc(int[] array)
         {
+            Stopwatch myWatch = new Stopwatch();
+            myWatch.Start();
+
             int t , j , i;
             for (i = 1; i < array.Length; i++)
             {
@@ -101,6 +104,10 @@ namespace Sortation_Algoritms
                 }
                 array[j] = t;
             }
+            myWatch.Stop();
+
+            timer = myWatch.ElapsedMilliseconds;
+
             return array;
         }
 
@@ -139,6 +146,9 @@ namespace Sortation_Algoritms
 
         public int[] QuickSortAsc(int[] array, int low, int high)
         {
+            Stopwatch myWatch = new Stopwatch();
+            myWatch.Start();
+
             if (low < high)
             {
                 int pi = partition(array, low, high);
@@ -146,6 +156,10 @@ namespace Sortation_Algoritms
                 QuickSortAsc(array, low, pi - 1);
                 QuickSortAsc(array, pi + 1, high);
             }
+            myWatch.Stop();
+
+            timer = myWatch.ElapsedMilliseconds;
+
             return array;
         }
 
