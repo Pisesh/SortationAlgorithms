@@ -50,6 +50,7 @@
             this.Tbx_Distance_End = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.Btn_Genrate = new System.Windows.Forms.Button();
+            this.Chb_NR = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -139,6 +140,7 @@
             // 
             // splitContainer1.Panel2
             // 
+            this.splitContainer1.Panel2.Controls.Add(this.Chb_NR);
             this.splitContainer1.Panel2.Controls.Add(this.Btn_Genrate);
             this.splitContainer1.Panel2.Controls.Add(this.Tbx_Distance_End);
             this.splitContainer1.Panel2.Controls.Add(this.label9);
@@ -283,13 +285,23 @@
             // 
             // Btn_Genrate
             // 
-            this.Btn_Genrate.Location = new System.Drawing.Point(110, 123);
+            this.Btn_Genrate.Location = new System.Drawing.Point(167, 127);
             this.Btn_Genrate.Name = "Btn_Genrate";
             this.Btn_Genrate.Size = new System.Drawing.Size(75, 23);
             this.Btn_Genrate.TabIndex = 18;
             this.Btn_Genrate.Text = "Genrate";
             this.Btn_Genrate.UseVisualStyleBackColor = true;
             this.Btn_Genrate.Click += new System.EventHandler(this.Btn_Genrate_Click);
+            // 
+            // Chb_NR
+            // 
+            this.Chb_NR.AutoSize = true;
+            this.Chb_NR.Location = new System.Drawing.Point(25, 131);
+            this.Chb_NR.Name = "Chb_NR";
+            this.Chb_NR.Size = new System.Drawing.Size(79, 17);
+            this.Chb_NR.TabIndex = 20;
+            this.Chb_NR.Text = "Non reapet";
+            this.Chb_NR.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -344,6 +356,7 @@
         private System.Windows.Forms.TextBox Tbx_Count;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.CheckBox Chb_NR;
     }
 }
 

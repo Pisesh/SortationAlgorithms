@@ -106,14 +106,21 @@ namespace Sortation_Algoritms
 
         }
 
-        public string RandomNumber(int count, int first, int end)
+        public string RandomNumber(int count, int first, int end, bool nonReapit)
         {
             string final = "";
             int[] array = new int[count];
 
-            array = Mrg.RandomNumber(count, first, end);
-            final = Msp.Concat(array);
-
+            if (nonReapit == true)
+            {
+                array = (Mrg.GenerateUniqueRandomNumbers(count, first, end).ToArray());
+                final = Msp.Concat(array);
+            }
+            else
+            {
+                array = Mrg.RandomNumber(count, first, end);
+                final = Msp.Concat(array);
+            }
             return final;
         }
 

@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Find.cs" />
     <Compile Include="RandomGenrator.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="Sort.cs" />
