@@ -80,7 +80,8 @@
             this.Cmb_Algorithm.Items.AddRange(new object[] {
             "Bubble Sort",
             "Selection Sort",
-            "Insertion Sort"});
+            "Insertion Sort",
+            "Quick Sort"});
             this.Cmb_Algorithm.Location = new System.Drawing.Point(164, 264);
             this.Cmb_Algorithm.Name = "Cmb_Algorithm";
             this.Cmb_Algorithm.Size = new System.Drawing.Size(121, 21);

@@ -43,10 +43,11 @@ namespace Sortation_Algoritms
         {
             int arrayLength = 0;
             string final = "";
-            int[] array = new int[arrayLength];
 
             arrayLength = Msp.Counter(inputString);
-
+            
+            int[] array = new int[arrayLength];
+            
             array = Msp.Splitor(inputString, arrayLength);
 
             if (algorithmType == "Bubble Sort")
@@ -82,6 +83,18 @@ namespace Sortation_Algoritms
                 {
                     array = Mso.InsertionSortDsc(array);
                 }
+            }
+            else if (algorithmType == "Quick Sort")
+            {
+                if (sortBy == "Asc")
+                {
+                    array = Mso.QuickSortAsc(array, 0, arrayLength - 1);
+                }
+                else
+                {
+                    array = Mso.QuickSortDec(array, 0, arrayLength - 1);
+                }
+
             }
 
 

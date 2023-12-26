@@ -12,6 +12,8 @@ namespace Sortation_Algoritms
         private long timer;
         Spliter Msp = new Spliter();
 
+        // Bubble Sort
+
         public int[] BubbleSortDes(int[] array)
         {
             array = BubbleSortAsc(array);
@@ -47,7 +49,7 @@ namespace Sortation_Algoritms
             return array;
         }
 
-
+        // Selection Sort
 
         public int[] SelectionSortAsc(int[] array)
         {
@@ -81,6 +83,8 @@ namespace Sortation_Algoritms
             return array;
         }
 
+        // Insertion Sort
+
         public int[] InsertionSortAsc(int[] array)
         {
             int t , j , i;
@@ -103,6 +107,51 @@ namespace Sortation_Algoritms
         public int[] InsertionSortDsc(int[] array)
         {
             array = InsertionSortAsc(array);
+            array = Msp.ReversNumberArray(array);
+
+            return array;
+        }
+
+        // Quick Sort
+        static void swap(int[] array, int i, int j)
+        {
+            int temp = array[i];
+            array[i] = array[j];
+            array[j] = temp;
+        }
+
+        static int partition(int[] array, int low, int high)
+        {
+            int pivot = array[high];
+
+            int i = (low - 1);
+            for (int j = low; j <= high - 1; j++)
+            {
+                if (array[j] < pivot)
+                {
+                    i++;
+                    swap(array, i, j);
+                }
+            }
+            swap(array, i + 1, high);
+            return (i + 1);
+        }
+
+        public int[] QuickSortAsc(int[] array, int low, int high)
+        {
+            if (low < high)
+            {
+                int pi = partition(array, low, high);
+
+                QuickSortAsc(array, low, pi - 1);
+                QuickSortAsc(array, pi + 1, high);
+            }
+            return array;
+        }
+
+        public int[] QuickSortDec(int[] array, int low, int high)
+        {
+            array = QuickSortAsc(array, low, high);
             array = Msp.ReversNumberArray(array);
 
             return array;
