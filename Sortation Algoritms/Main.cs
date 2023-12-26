@@ -60,6 +60,18 @@ namespace Sortation_Algoritms
                     array = Mso.BubbleSortDes(array);
                 }
             }
+            else if (algorithmType == "Selection Sort")
+            {
+                if (sortBy == "Asc")
+                {
+                    array = Mso.BubbleSortAsc(array);
+                }
+                else
+                {
+                    array = Mso.BubbleSortDes(array);
+                }
+
+            }
 
             algorithmTime = Mso.GetTimer;
             final = Msp.Concat(array);

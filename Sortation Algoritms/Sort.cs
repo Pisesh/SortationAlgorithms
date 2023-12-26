@@ -63,9 +63,57 @@ namespace Sortation_Algoritms
 
             timer = myWatch.ElapsedMilliseconds;
             return array;
-
         }
 
+
+
+        public int[] SelectionSortAsc(int[] array)
+        {
+            Stopwatch myWatch = new Stopwatch();
+            myWatch.Start();
+
+            for (int i = 0; i < array.Length - 1; i++)
+            {
+                for (int j = i + 1; j < array.Length; j++)
+                {
+                    if (array[i] > array[j]) 
+                    {
+                        int temp = array[i];
+                        array[i] = array[j];
+                        array[j] = temp;                    
+                    }
+                }
+            }
+            myWatch.Stop();
+
+            timer = myWatch.ElapsedMilliseconds;
+
+            return array;
+        }
+
+        public int[] SelectionSortDes(int[] array)
+        {
+            Stopwatch myWatch = new Stopwatch();
+            myWatch.Start();
+
+            for (int i = 0; i < array.Length - 1; i++)
+            {
+                for (int j = i + 1; j < array.Length; j++)
+                {
+                    if (array[i] < array[j])
+                    {
+                        int temp = array[i];
+                        array[i] = array[j];
+                        array[j] = temp;
+                    }
+                }
+            }
+            myWatch.Stop();
+
+            timer = myWatch.ElapsedMilliseconds;
+
+            return array;
+        }
 
 
         public long GetTimer
