@@ -46,6 +46,7 @@
             // 
             // Tbx_Input
             // 
+            this.Tbx_Input.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Tbx_Input.Location = new System.Drawing.Point(52, 118);
             this.Tbx_Input.Multiline = true;
             this.Tbx_Input.Name = "Tbx_Input";
@@ -148,6 +149,7 @@
             // 
             // Tbx_Output
             // 
+            this.Tbx_Output.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Tbx_Output.Location = new System.Drawing.Point(52, 405);
             this.Tbx_Output.Multiline = true;
             this.Tbx_Output.Name = "Tbx_Output";
@@ -160,9 +162,9 @@
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(12, 553);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(145, 18);
+            this.label5.Size = new System.Drawing.Size(109, 18);
             this.label5.TabIndex = 10;
-            this.label5.Text = "Sort algorithm  time: ";
+            this.label5.Text = "algorithm time: ";
             // 
             // Lbl_SortTime
             // 
