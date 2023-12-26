@@ -72,6 +72,18 @@ namespace Sortation_Algoritms
                 }
 
             }
+            else if (algorithmType == "Insertion Sort")
+            {
+                if (sortBy == "Asc")
+                {
+                    array = Mso.InsertionSortAsc(array);
+                }
+                else
+                {
+                    array = Mso.InsertionSortDsc(array);
+                }
+            }
+
 
             algorithmTime = Mso.GetTimer;
             final = Msp.Concat(array);

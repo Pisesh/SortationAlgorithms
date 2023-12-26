@@ -115,6 +115,44 @@ namespace Sortation_Algoritms
             return array;
         }
 
+        public int[] InsertionSortAsc(int[] array)
+        {
+            int t , j , i;
+            for (i = 1; i < array.Length; i++)
+            {
+                t = array[i];
+                for (j = i; j > 0; j--)
+                {
+                    if (t >= array[j - 1])
+                    {
+                        break;
+                    }
+                    array[j] = array[j - 1];
+                }
+                array[j] = t;
+            }
+            return array;
+        }
+
+        public int[] InsertionSortDsc(int[] array)
+        {
+            int t, j, i;
+            for (i = 1; i < array.Length; i++)
+            {
+                t = array[i];
+                for (j = i; j < 0; j--)
+                {
+                    if (t < array[j - 1])
+                    {
+                        break;
+                    }
+                    array[j] = array[j - 1];
+                }
+                array[j] = t;
+            }
+            return array;
+        }
+
 
         public long GetTimer
         {
@@ -122,6 +160,5 @@ namespace Sortation_Algoritms
                 return timer;
             }
         }
-
     }
 }

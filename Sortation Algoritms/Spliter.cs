@@ -64,5 +64,17 @@ namespace Sortation_Algoritms
 
             return count + 1;
         }
+
+        public int[] ReversNumberArray(int[] array)
+        {
+            int[] RArray = new int[array.Length];
+            int count = 0;
+            for (int i = array.Length - 1; i >= 0 ; i--) 
+            {
+                RArray[count] = array[i];
+                count++;
+            }
+            return RArray;
+        }
     }
 }
