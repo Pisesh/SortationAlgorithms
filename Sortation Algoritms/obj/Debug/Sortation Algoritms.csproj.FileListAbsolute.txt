@@ -7,3 +7,4 @@ C:\Users\john\source\repos\Sortation Algoritms\Sortation Algoritms\obj\Debug\Sor
 C:\Users\john\source\repos\Sortation Algoritms\Sortation Algoritms\obj\Debug\Sortation Algoritms.csproj.GenerateResource.cache
 C:\Users\john\source\repos\Sortation Algoritms\Sortation Algoritms\obj\Debug\Sortation Algoritms.exe
 C:\Users\john\source\repos\Sortation Algoritms\Sortation Algoritms\obj\Debug\Sortation Algoritms.pdb
+C:\Users\john\source\repos\Sortation Algoritms\Sortation Algoritms\obj\Debug\Sortation_Algoritms.LoadForm.resources

@@ -12,9 +12,9 @@ namespace Sortation_Algoritms
         private long algorithmTime;
         private string algorithmType;
 
-        RandomGenrator Mrg = new RandomGenrator();
+        RandomManager Mrm = new RandomManager();
+        SortManager Msm = new SortManager();
         Spliter Msp = new Spliter();
-        Sort Mso = new Sort();
 
         public string SetSortBy
         {
@@ -40,89 +40,25 @@ namespace Sortation_Algoritms
             }
         }
 
+
+        // Sort
         public string Sort(string inputString)
         {
-            int arrayLength = 0;
-            string final = "";
+            Msm.SetSortBy = sortBy;
+            Msm.SetAlgorithmType = algorithmType;
 
-            arrayLength = Msp.Counter(inputString);
-            
-            int[] array = new int[arrayLength];
-            
-            array = Msp.Splitor(inputString, arrayLength);
-
-            if (algorithmType == "Bubble Sort")
-            {
-                if (sortBy == "Asc")
-                {
-                    array = Mso.BubbleSortAsc(array);
-                }
-                else
-                {
-                    array = Mso.BubbleSortDes(array);
-                }
-            }
-            else if (algorithmType == "Selection Sort")
-            {
-                if (sortBy == "Asc")
-                {
-                    array = Mso.SelectionSortAsc(array);
-                }
-                else
-                {
-                    array = Mso.SelectionSortDes(array);
-                }
-
-            }
-            else if (algorithmType == "Insertion Sort")
-            {
-                if (sortBy == "Asc")
-                {
-                    array = Mso.InsertionSortAsc(array);
-                }
-                else
-                {
-                    array = Mso.InsertionSortDsc(array);
-                }
-            }
-            else if (algorithmType == "Quick Sort")
-            {
-                if (sortBy == "Asc")
-                {
-                    array = Mso.QuickSortAsc(array, 0, arrayLength - 1);
-                }
-                else
-                {
-                    array = Mso.QuickSortDec(array, 0, arrayLength - 1);
-                }
-
-            }
-
-
-            algorithmTime = Mso.GetTimer;
-            final = Msp.Concat(array);
+            string final = Msm.Sort(inputString);
+            algorithmTime = Msm.GetAlgorithmTime;
 
             return final;
-
         }
 
         public string RandomNumber(int count, int first, int end, bool nonReapit)
         {
-            string final = "";
-            int[] array = new int[count];
-
-            if (nonReapit == true)
-            {
-                array = (Mrg.GenerateUniqueRandomNumbers(count, first, end).ToArray());
-                final = Msp.Concat(array);
-            }
-            else
-            {
-                array = Mrg.RandomNumber(count, first, end);
-                final = Msp.Concat(array);
-            }
-            return final;
+            return Mrm.RandomNumber(count, first, end, nonReapit);
         }
+
+
 
     }
 }
