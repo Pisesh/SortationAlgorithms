@@ -47,8 +47,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="RandomManager.cs" />
+    <Compile Include="SearchManager.cs" />
     <Compile Include="SortManager.cs" />
-    <Compile Include="Find.cs" />
+    <Compile Include="Search.cs" />
     <Compile Include="LoadForm.cs">
       <SubType>Form</SubType>
     </Compile>

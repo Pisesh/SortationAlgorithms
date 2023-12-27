@@ -80,6 +80,7 @@
             this.Btn_Sort_Find = new System.Windows.Forms.Button();
             this.Panel_Sort = new System.Windows.Forms.Panel();
             this.Btn_Find_Sort = new System.Windows.Forms.Button();
+            this.Chb_Out_Range = new System.Windows.Forms.CheckBox();
             this.tabControl.SuspendLayout();
             this.Tbp_Sort.SuspendLayout();
             this.Tbp_Find.SuspendLayout();
@@ -402,6 +403,7 @@
             // 
             // splitContainer2.Panel2
             // 
+            this.splitContainer2.Panel2.Controls.Add(this.Chb_Out_Range);
             this.splitContainer2.Panel2.Controls.Add(this.Chb_Fill_Random);
             this.splitContainer2.Panel2.Controls.Add(this.Chb_Reapet);
             this.splitContainer2.Panel2.Controls.Add(this.Btn_Generate_Find);
@@ -412,7 +414,7 @@
             this.splitContainer2.Panel2.Controls.Add(this.Tbx_Count_Find);
             this.splitContainer2.Panel2.Controls.Add(this.label14);
             this.splitContainer2.Panel2.Controls.Add(this.label15);
-            this.splitContainer2.Size = new System.Drawing.Size(579, 167);
+            this.splitContainer2.Size = new System.Drawing.Size(579, 179);
             this.splitContainer2.SplitterDistance = 269;
             this.splitContainer2.TabIndex = 28;
             // 
@@ -431,8 +433,8 @@
             this.Cmb_Algorithm_Type_Find.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Cmb_Algorithm_Type_Find.FormattingEnabled = true;
             this.Cmb_Algorithm_Type_Find.Items.AddRange(new object[] {
-            "Liner Find",
-            "Binery Find"});
+            "Liner Search",
+            "Binery Search"});
             this.Cmb_Algorithm_Type_Find.Location = new System.Drawing.Point(134, 23);
             this.Cmb_Algorithm_Type_Find.Name = "Cmb_Algorithm_Type_Find";
             this.Cmb_Algorithm_Type_Find.Size = new System.Drawing.Size(121, 21);
@@ -556,8 +558,9 @@
             this.Btn_Find.Name = "Btn_Find";
             this.Btn_Find.Size = new System.Drawing.Size(75, 23);
             this.Btn_Find.TabIndex = 24;
-            this.Btn_Find.Text = "Find";
+            this.Btn_Find.Text = "Search";
             this.Btn_Find.UseVisualStyleBackColor = true;
+            this.Btn_Find.Click += new System.EventHandler(this.Btn_Find_Click);
             // 
             // label18
             // 
@@ -615,6 +618,7 @@
             this.Chb_Fill_Random.TabIndex = 21;
             this.Chb_Fill_Random.Text = "Fill search";
             this.Chb_Fill_Random.UseVisualStyleBackColor = true;
+            this.Chb_Fill_Random.CheckedChanged += new System.EventHandler(this.Chb_Fill_Random_CheckedChanged);
             // 
             // label16
             // 
@@ -655,6 +659,17 @@
             this.Btn_Find_Sort.Text = "Find";
             this.Btn_Find_Sort.UseVisualStyleBackColor = true;
             this.Btn_Find_Sort.Click += new System.EventHandler(this.Btn_Find_Sort_Click);
+            // 
+            // Chb_Out_Range
+            // 
+            this.Chb_Out_Range.AutoSize = true;
+            this.Chb_Out_Range.Enabled = false;
+            this.Chb_Out_Range.Location = new System.Drawing.Point(110, 154);
+            this.Chb_Out_Range.Name = "Chb_Out_Range";
+            this.Chb_Out_Range.Size = new System.Drawing.Size(85, 17);
+            this.Chb_Out_Range.TabIndex = 22;
+            this.Chb_Out_Range.Text = "Out of range";
+            this.Chb_Out_Range.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -746,6 +761,7 @@
         private System.Windows.Forms.Button Btn_Sort_Find;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Button Btn_Find_Sort;
+        private System.Windows.Forms.CheckBox Chb_Out_Range;
     }
 }
 

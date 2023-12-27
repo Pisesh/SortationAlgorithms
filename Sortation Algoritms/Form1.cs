@@ -82,5 +82,24 @@ namespace Sortation_Algoritms
                 Panel_Sort.Visible = false;
             }
         }
+
+        private void Btn_Find_Click(object sender, EventArgs e)
+        {
+            main.SetAlgorithmType = Cmb_Algorithm_Type_Find.Text;
+            Tbx_Output_Find.Text = main.Search(Tbx_Input_find.Text, int.Parse(Tbx_Input_Search.Text));
+            Lbl_Time_Find.Text = Convert.ToString(main.GetAlgorithmTime);
+        }
+
+        private void Chb_Fill_Random_CheckedChanged(object sender, EventArgs e)
+        {
+            if (Chb_Fill_Random.Checked == true)
+            {
+                Chb_Out_Range.Enabled = true;
+            }
+            else
+            {
+                Chb_Out_Range.Enabled = false;
+            }
+        }
     }
 }

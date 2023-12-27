@@ -13,8 +13,8 @@ namespace Sortation_Algoritms
         private string algorithmType;
 
         RandomManager Mrm = new RandomManager();
+        SearchManager MSM = new SearchManager();
         SortManager Msm = new SortManager();
-        Spliter Msp = new Spliter();
 
         public string SetSortBy
         {
@@ -53,12 +53,26 @@ namespace Sortation_Algoritms
             return final;
         }
 
+        // Search
+        public string  Search(string array, int search)
+        {
+            string final = "";
+            final = MSM.Search(array, search, algorithmType);
+            algorithmTime = MSM.GetAlgorithmTime;
+
+            if (MSM.MessageCheck.Contains("The number was not find :("))
+            {
+                final = MSM.MessageCheck;
+            }
+
+            return final;
+
+        }
+
+        // random
         public string RandomNumber(int count, int first, int end, bool nonReapit)
         {
             return Mrm.RandomNumber(count, first, end, nonReapit);
         }
-
-
-
     }
 }
