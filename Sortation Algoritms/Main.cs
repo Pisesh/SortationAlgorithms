@@ -66,11 +66,11 @@ namespace Sortation_Algoritms
             {
                 if (sortBy == "Asc")
                 {
-                    array = Mso.BubbleSortAsc(array);
+                    array = Mso.SelectionSortAsc(array);
                 }
                 else
                 {
-                    array = Mso.BubbleSortDes(array);
+                    array = Mso.SelectionSortDes(array);
                 }
 
             }
