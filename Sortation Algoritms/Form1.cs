@@ -56,7 +56,12 @@ namespace Sortation_Algoritms
 
         private void Btn_Genrate_Click(object sender, EventArgs e)
         {
-            Tbx_Input.Text = main.RandomNumber(int.Parse(Tbx_Count.Text), int.Parse(Tbx_Distance_First.Text), int.Parse(Tbx_Distance_End.Text), Chb_NR.Checked);
+            Tbx_Input.Text = main.RandomNumber(
+                int.Parse(Tbx_Count.Text),
+                int.Parse(Tbx_Distance_First.Text),
+                int.Parse(Tbx_Distance_End.Text),
+                Chb_NR.Checked
+                );
         }
 
         private void Btn_Sort_Find_Click(object sender, EventArgs e)
@@ -100,6 +105,39 @@ namespace Sortation_Algoritms
             {
                 Chb_Out_Range.Enabled = false;
             }
+        }
+
+        private void Btn_Generate_Find_Click(object sender, EventArgs e)
+        {
+            int counter = 1;
+
+            if (Chb_Fill_Random.Checked == true)
+            {
+                counter = 2;
+            }
+
+            string[] str = new string[counter];
+
+            str = main.RandomSearch(
+                int.Parse(Tbx_Count_Find.Text),
+                int.Parse(Tbx_From_Find.Text),
+                int.Parse(Tbx_To_Find.Text),
+                Chb_Reapet.Checked,
+                Chb_Fill_Random.Checked,
+                Chb_Out_Range.Checked
+                );
+
+            if (Chb_Fill_Random.Checked == true)
+            {
+                Tbx_Input.Text = str[0];
+                Tbx_Input_Search.Text = str[1];
+            }
+            else
+            {
+                Tbx_Input.Text = str[0];
+            }
+
+
         }
     }
 }

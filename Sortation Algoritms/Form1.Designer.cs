@@ -459,6 +459,7 @@
             this.Btn_Generate_Find.TabIndex = 18;
             this.Btn_Generate_Find.Text = "Generate";
             this.Btn_Generate_Find.UseVisualStyleBackColor = true;
+            this.Btn_Generate_Find.Click += new System.EventHandler(this.Btn_Generate_Find_Click);
             // 
             // Tbx_To_Find
             // 

@@ -69,10 +69,38 @@ namespace Sortation_Algoritms
 
         }
 
-        // random
+        // Random Sort
         public string RandomNumber(int count, int first, int end, bool nonReapit)
         {
             return Mrm.RandomNumber(count, first, end, nonReapit);
         }
+
+        // Random Search
+        public string[] RandomSearch(int count, int first, int end, bool nonReapit, bool fill, bool outOfrange)
+        {
+            int index = 1;
+
+            if (fill == true)
+            {
+                index = 2;
+            }
+
+            string[] str = new string[index];
+
+            Mrm.RandomSearch(count, first, end, nonReapit, fill, outOfrange);
+            
+            if (fill == true)
+            {
+                str[0] = Mrm.GetOrigin;
+                str[1] = Mrm.GetSecond;
+            }
+            else
+            {
+                str[0] = Mrm.GetOrigin;
+            }
+            
+            return str;
+        }
+
     }
 }
