@@ -65,6 +65,8 @@ namespace Sortation_Algoritms
                 final = MSM.MessageCheck;
             }
 
+            algorithmTime = MSM.GetAlgorithmTime;
+
             return final;
 
         }

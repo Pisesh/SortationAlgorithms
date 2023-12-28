@@ -129,12 +129,12 @@ namespace Sortation_Algoritms
 
             if (Chb_Fill_Random.Checked == true)
             {
-                Tbx_Input.Text = str[0];
+                Tbx_Input_find.Text = str[0];
                 Tbx_Input_Search.Text = str[1];
             }
             else
             {
-                Tbx_Input.Text = str[0];
+                Tbx_Input_find.Text = str[0];
             }
 
 
