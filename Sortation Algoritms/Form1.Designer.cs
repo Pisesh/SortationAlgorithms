@@ -30,7 +30,7 @@
         {
             this.tabControl = new System.Windows.Forms.TabControl();
             this.Tbp_Sort = new System.Windows.Forms.TabPage();
-            this.Tbp_Find = new System.Windows.Forms.TabPage();
+            this.Btn_Find_Sort = new System.Windows.Forms.Button();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.Rdb_Descending = new System.Windows.Forms.RadioButton();
@@ -54,9 +54,17 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.Tbx_Input = new System.Windows.Forms.TextBox();
+            this.Tbp_Find = new System.Windows.Forms.TabPage();
+            this.label10 = new System.Windows.Forms.Label();
+            this.Tbx_Input_Search = new System.Windows.Forms.TextBox();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
+            this.Panel_Sort = new System.Windows.Forms.Panel();
+            this.Btn_Sort_Find = new System.Windows.Forms.Button();
+            this.label16 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.Cmb_Algorithm_Type_Find = new System.Windows.Forms.ComboBox();
+            this.Chb_Out_Range = new System.Windows.Forms.CheckBox();
+            this.Chb_Fill_Random = new System.Windows.Forms.CheckBox();
             this.Chb_Reapet = new System.Windows.Forms.CheckBox();
             this.Btn_Generate_Find = new System.Windows.Forms.Button();
             this.Tbx_To_Find = new System.Windows.Forms.TextBox();
@@ -73,22 +81,14 @@
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.Tbx_Input_find = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.Tbx_Input_Search = new System.Windows.Forms.TextBox();
-            this.Chb_Fill_Random = new System.Windows.Forms.CheckBox();
-            this.label16 = new System.Windows.Forms.Label();
-            this.Btn_Sort_Find = new System.Windows.Forms.Button();
-            this.Panel_Sort = new System.Windows.Forms.Panel();
-            this.Btn_Find_Sort = new System.Windows.Forms.Button();
-            this.Chb_Out_Range = new System.Windows.Forms.CheckBox();
             this.tabControl.SuspendLayout();
             this.Tbp_Sort.SuspendLayout();
-            this.Tbp_Find.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.Tbp_Find.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
             this.splitContainer2.Panel1.SuspendLayout();
             this.splitContainer2.Panel2.SuspendLayout();
@@ -125,25 +125,15 @@
             this.Tbp_Sort.TabIndex = 0;
             this.Tbp_Sort.Text = "Sort";
             // 
-            // Tbp_Find
+            // Btn_Find_Sort
             // 
-            this.Tbp_Find.BackColor = System.Drawing.SystemColors.Control;
-            this.Tbp_Find.Controls.Add(this.label10);
-            this.Tbp_Find.Controls.Add(this.Tbx_Input_Search);
-            this.Tbp_Find.Controls.Add(this.splitContainer2);
-            this.Tbp_Find.Controls.Add(this.Lbl_Time_Find);
-            this.Tbp_Find.Controls.Add(this.label17);
-            this.Tbp_Find.Controls.Add(this.Tbx_Output_Find);
-            this.Tbp_Find.Controls.Add(this.Btn_Find);
-            this.Tbp_Find.Controls.Add(this.label18);
-            this.Tbp_Find.Controls.Add(this.label19);
-            this.Tbp_Find.Controls.Add(this.Tbx_Input_find);
-            this.Tbp_Find.Location = new System.Drawing.Point(4, 22);
-            this.Tbp_Find.Name = "Tbp_Find";
-            this.Tbp_Find.Padding = new System.Windows.Forms.Padding(3);
-            this.Tbp_Find.Size = new System.Drawing.Size(591, 586);
-            this.Tbp_Find.TabIndex = 1;
-            this.Tbp_Find.Text = "Find";
+            this.Btn_Find_Sort.Location = new System.Drawing.Point(471, 550);
+            this.Btn_Find_Sort.Name = "Btn_Find_Sort";
+            this.Btn_Find_Sort.Size = new System.Drawing.Size(75, 23);
+            this.Btn_Find_Sort.TabIndex = 21;
+            this.Btn_Find_Sort.Text = "Find";
+            this.Btn_Find_Sort.UseVisualStyleBackColor = true;
+            this.Btn_Find_Sort.Click += new System.EventHandler(this.Btn_Find_Sort_Click);
             // 
             // splitContainer1
             // 
@@ -390,6 +380,44 @@
             this.Tbx_Input.Size = new System.Drawing.Size(461, 103);
             this.Tbx_Input.TabIndex = 13;
             // 
+            // Tbp_Find
+            // 
+            this.Tbp_Find.BackColor = System.Drawing.SystemColors.Control;
+            this.Tbp_Find.Controls.Add(this.label10);
+            this.Tbp_Find.Controls.Add(this.Tbx_Input_Search);
+            this.Tbp_Find.Controls.Add(this.splitContainer2);
+            this.Tbp_Find.Controls.Add(this.Lbl_Time_Find);
+            this.Tbp_Find.Controls.Add(this.label17);
+            this.Tbp_Find.Controls.Add(this.Tbx_Output_Find);
+            this.Tbp_Find.Controls.Add(this.Btn_Find);
+            this.Tbp_Find.Controls.Add(this.label18);
+            this.Tbp_Find.Controls.Add(this.label19);
+            this.Tbp_Find.Controls.Add(this.Tbx_Input_find);
+            this.Tbp_Find.Location = new System.Drawing.Point(4, 22);
+            this.Tbp_Find.Name = "Tbp_Find";
+            this.Tbp_Find.Padding = new System.Windows.Forms.Padding(3);
+            this.Tbp_Find.Size = new System.Drawing.Size(591, 586);
+            this.Tbp_Find.TabIndex = 1;
+            this.Tbp_Find.Text = "Find";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(8, 210);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(168, 18);
+            this.label10.TabIndex = 30;
+            this.label10.Text = "Enter number for search";
+            // 
+            // Tbx_Input_Search
+            // 
+            this.Tbx_Input_Search.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Tbx_Input_Search.Location = new System.Drawing.Point(194, 206);
+            this.Tbx_Input_Search.Name = "Tbx_Input_Search";
+            this.Tbx_Input_Search.Size = new System.Drawing.Size(315, 26);
+            this.Tbx_Input_Search.TabIndex = 29;
+            // 
             // splitContainer2
             // 
             this.splitContainer2.Location = new System.Drawing.Point(8, 264);
@@ -418,6 +446,36 @@
             this.splitContainer2.SplitterDistance = 269;
             this.splitContainer2.TabIndex = 28;
             // 
+            // Panel_Sort
+            // 
+            this.Panel_Sort.Controls.Add(this.Btn_Sort_Find);
+            this.Panel_Sort.Controls.Add(this.label16);
+            this.Panel_Sort.Location = new System.Drawing.Point(3, 50);
+            this.Panel_Sort.Name = "Panel_Sort";
+            this.Panel_Sort.Size = new System.Drawing.Size(263, 100);
+            this.Panel_Sort.TabIndex = 11;
+            this.Panel_Sort.Visible = false;
+            // 
+            // Btn_Sort_Find
+            // 
+            this.Btn_Sort_Find.Location = new System.Drawing.Point(90, 55);
+            this.Btn_Sort_Find.Name = "Btn_Sort_Find";
+            this.Btn_Sort_Find.Size = new System.Drawing.Size(75, 23);
+            this.Btn_Sort_Find.TabIndex = 25;
+            this.Btn_Sort_Find.Text = "Sort";
+            this.Btn_Sort_Find.UseVisualStyleBackColor = true;
+            this.Btn_Sort_Find.Click += new System.EventHandler(this.Btn_Sort_Find_Click);
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(11, 9);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(256, 32);
+            this.label16.TabIndex = 11;
+            this.label16.Text = "If you want to use binery search algorithm ,\r\nfirst  you need to be sort array";
+            // 
             // label11
             // 
             this.label11.AutoSize = true;
@@ -434,12 +492,34 @@
             this.Cmb_Algorithm_Type_Find.FormattingEnabled = true;
             this.Cmb_Algorithm_Type_Find.Items.AddRange(new object[] {
             "Liner Search",
-            "Binery Search"});
+            "Binary Search"});
             this.Cmb_Algorithm_Type_Find.Location = new System.Drawing.Point(134, 23);
             this.Cmb_Algorithm_Type_Find.Name = "Cmb_Algorithm_Type_Find";
             this.Cmb_Algorithm_Type_Find.Size = new System.Drawing.Size(121, 21);
             this.Cmb_Algorithm_Type_Find.TabIndex = 9;
             this.Cmb_Algorithm_Type_Find.SelectedIndexChanged += new System.EventHandler(this.Cmb_Algorithm_Type_Find_SelectedIndexChanged);
+            // 
+            // Chb_Out_Range
+            // 
+            this.Chb_Out_Range.AutoSize = true;
+            this.Chb_Out_Range.Enabled = false;
+            this.Chb_Out_Range.Location = new System.Drawing.Point(110, 154);
+            this.Chb_Out_Range.Name = "Chb_Out_Range";
+            this.Chb_Out_Range.Size = new System.Drawing.Size(85, 17);
+            this.Chb_Out_Range.TabIndex = 22;
+            this.Chb_Out_Range.Text = "Out of range";
+            this.Chb_Out_Range.UseVisualStyleBackColor = true;
+            // 
+            // Chb_Fill_Random
+            // 
+            this.Chb_Fill_Random.AutoSize = true;
+            this.Chb_Fill_Random.Location = new System.Drawing.Point(110, 131);
+            this.Chb_Fill_Random.Name = "Chb_Fill_Random";
+            this.Chb_Fill_Random.Size = new System.Drawing.Size(73, 17);
+            this.Chb_Fill_Random.TabIndex = 21;
+            this.Chb_Fill_Random.Text = "Fill search";
+            this.Chb_Fill_Random.UseVisualStyleBackColor = true;
+            this.Chb_Fill_Random.CheckedChanged += new System.EventHandler(this.Chb_Fill_Random_CheckedChanged);
             // 
             // Chb_Reapet
             // 
@@ -592,86 +672,6 @@
             this.Tbx_Input_find.Size = new System.Drawing.Size(461, 92);
             this.Tbx_Input_find.TabIndex = 21;
             // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(8, 210);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(168, 18);
-            this.label10.TabIndex = 30;
-            this.label10.Text = "Enter number for search";
-            // 
-            // Tbx_Input_Search
-            // 
-            this.Tbx_Input_Search.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Tbx_Input_Search.Location = new System.Drawing.Point(194, 206);
-            this.Tbx_Input_Search.Name = "Tbx_Input_Search";
-            this.Tbx_Input_Search.Size = new System.Drawing.Size(315, 26);
-            this.Tbx_Input_Search.TabIndex = 29;
-            // 
-            // Chb_Fill_Random
-            // 
-            this.Chb_Fill_Random.AutoSize = true;
-            this.Chb_Fill_Random.Location = new System.Drawing.Point(110, 131);
-            this.Chb_Fill_Random.Name = "Chb_Fill_Random";
-            this.Chb_Fill_Random.Size = new System.Drawing.Size(73, 17);
-            this.Chb_Fill_Random.TabIndex = 21;
-            this.Chb_Fill_Random.Text = "Fill search";
-            this.Chb_Fill_Random.UseVisualStyleBackColor = true;
-            this.Chb_Fill_Random.CheckedChanged += new System.EventHandler(this.Chb_Fill_Random_CheckedChanged);
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(11, 9);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(256, 32);
-            this.label16.TabIndex = 11;
-            this.label16.Text = "If you want to use binery search algorithm ,\r\nfirst  you need to be sort array";
-            // 
-            // Btn_Sort_Find
-            // 
-            this.Btn_Sort_Find.Location = new System.Drawing.Point(90, 55);
-            this.Btn_Sort_Find.Name = "Btn_Sort_Find";
-            this.Btn_Sort_Find.Size = new System.Drawing.Size(75, 23);
-            this.Btn_Sort_Find.TabIndex = 25;
-            this.Btn_Sort_Find.Text = "Sort";
-            this.Btn_Sort_Find.UseVisualStyleBackColor = true;
-            this.Btn_Sort_Find.Click += new System.EventHandler(this.Btn_Sort_Find_Click);
-            // 
-            // Panel_Sort
-            // 
-            this.Panel_Sort.Controls.Add(this.Btn_Sort_Find);
-            this.Panel_Sort.Controls.Add(this.label16);
-            this.Panel_Sort.Location = new System.Drawing.Point(3, 50);
-            this.Panel_Sort.Name = "Panel_Sort";
-            this.Panel_Sort.Size = new System.Drawing.Size(263, 100);
-            this.Panel_Sort.TabIndex = 11;
-            this.Panel_Sort.Visible = false;
-            // 
-            // Btn_Find_Sort
-            // 
-            this.Btn_Find_Sort.Location = new System.Drawing.Point(471, 550);
-            this.Btn_Find_Sort.Name = "Btn_Find_Sort";
-            this.Btn_Find_Sort.Size = new System.Drawing.Size(75, 23);
-            this.Btn_Find_Sort.TabIndex = 21;
-            this.Btn_Find_Sort.Text = "Find";
-            this.Btn_Find_Sort.UseVisualStyleBackColor = true;
-            this.Btn_Find_Sort.Click += new System.EventHandler(this.Btn_Find_Sort_Click);
-            // 
-            // Chb_Out_Range
-            // 
-            this.Chb_Out_Range.AutoSize = true;
-            this.Chb_Out_Range.Enabled = false;
-            this.Chb_Out_Range.Location = new System.Drawing.Point(110, 154);
-            this.Chb_Out_Range.Name = "Chb_Out_Range";
-            this.Chb_Out_Range.Size = new System.Drawing.Size(85, 17);
-            this.Chb_Out_Range.TabIndex = 22;
-            this.Chb_Out_Range.Text = "Out of range";
-            this.Chb_Out_Range.UseVisualStyleBackColor = true;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -686,8 +686,6 @@
             this.tabControl.ResumeLayout(false);
             this.Tbp_Sort.ResumeLayout(false);
             this.Tbp_Sort.PerformLayout();
-            this.Tbp_Find.ResumeLayout(false);
-            this.Tbp_Find.PerformLayout();
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel1.PerformLayout();
             this.splitContainer1.Panel2.ResumeLayout(false);
@@ -696,6 +694,8 @@
             this.splitContainer1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.Tbp_Find.ResumeLayout(false);
+            this.Tbp_Find.PerformLayout();
             this.splitContainer2.Panel1.ResumeLayout(false);
             this.splitContainer2.Panel1.PerformLayout();
             this.splitContainer2.Panel2.ResumeLayout(false);

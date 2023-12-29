@@ -47,6 +47,12 @@ namespace Sortation_Algoritms
                 message = Src.MessageCheck;  
             }
 
+            if (algorithmType == "Binary Search")
+            {
+                Src.BinarySearch(farray, search);
+                message = Src.MessageCheck;
+            }
+
             algorithmTime = Src.GetTimer;
 
             return final = Convert.ToString(temp);
